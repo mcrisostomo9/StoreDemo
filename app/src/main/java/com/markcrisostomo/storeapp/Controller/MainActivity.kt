@@ -1,7 +1,8 @@
-package com.markcrisostomo.storeapp
+package com.markcrisostomo.storeapp.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.markcrisostomo.storeapp.R
 
 class MainActivity : AppCompatActivity() {
 
