@@ -2,8 +2,8 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="339dp"
-    android:layout_height="339dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context="com.markcrisostomo.storeapp.Controller.MainActivity">
 
     <TextView
@@ -20,16 +20,15 @@
     <ListView
         android:id="@+id/categoryListView"
         android:layout_width="0dp"
-        android:layout_height="368dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:divider="@null"
+        />
 
 </android.support.constraint.ConstraintLayout>
