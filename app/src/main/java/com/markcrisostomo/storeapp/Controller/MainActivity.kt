@@ -2,7 +2,10 @@ package com.markcrisostomo.storeapp.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.markcrisostomo.storeapp.Adapters.CategoryAdapter
 import com.markcrisostomo.storeapp.Model.Category
 import com.markcrisostomo.storeapp.R
@@ -21,5 +24,7 @@ class MainActivity : AppCompatActivity() {
                 DataService.categories
                 )
         categoryListView.adapter = adapter
+
+
     }
 }
