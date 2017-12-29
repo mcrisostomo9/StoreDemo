@@ -10,6 +10,10 @@ object DataService {
             Category("SHIRTS", "shirtimage"),
             Category("HOODIES", "hoodieimage"),
             Category("HATS", "hatimage"),
+            Category("DIGITAL", "digitalgoodsimage"),
+            Category("SHIRTS", "shirtimage"),
+            Category("HOODIES", "hoodieimage"),
+            Category("HATS", "hatimage"),
             Category("DIGITAL", "digitalgoodsimage")
     )
 
@@ -17,10 +21,18 @@ object DataService {
             Product("Devslopes Graphic Beanie", "$18", "hat1"),
             Product("Devslopes Hat Black", "$20", "hat2"),
             Product("Devslopes Hat White", "$20", "hat3"),
+            Product("Devslopes Hat SNapback", "$22", "hat4"),
+            Product("Devslopes Graphic Beanie", "$18", "hat1"),
+            Product("Devslopes Hat Black", "$20", "hat2"),
+            Product("Devslopes Hat White", "$20", "hat3"),
             Product("Devslopes Hat SNapback", "$22", "hat4")
     )
 
     val hoodies = listOf(
+            Product("Devslopes Hoodie Gray", "$28", "hoodie1"),
+            Product("Devslopes Hoodie Red", "$32", "hoodie2"),
+            Product("Devslopes Gray Hoodie", "$28", "hoodie3"),
+            Product("Devslopes Black Hoodie", "$28", "hoodie4"),
             Product("Devslopes Hoodie Gray", "$28", "hoodie1"),
             Product("Devslopes Hoodie Red", "$32", "hoodie2"),
             Product("Devslopes Gray Hoodie", "$28", "hoodie3"),
