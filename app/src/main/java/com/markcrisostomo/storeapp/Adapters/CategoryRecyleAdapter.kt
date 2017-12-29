@@ -12,7 +12,7 @@ import com.markcrisostomo.storeapp.R
 import kotlinx.android.synthetic.main.category_list_item.view.*
 
 
-class CategoryRecyleAdapter(val context: Context, val categories: List<Category>) : RecyclerView.Adapter<CategoryRecyleAdapter.Holder>() {
+class CategoryRecyleAdapter(val context: Context, val categories: List<Category>, val itemClick: (Category) -> Unit) : RecyclerView.Adapter<CategoryRecyleAdapter.Holder>() {
     override fun getItemCount(): Int {
         return categories.count()
     }
@@ -24,19 +24,20 @@ class CategoryRecyleAdapter(val context: Context, val categories: List<Category>
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): Holder {
         val view = LayoutInflater.from(context)
                 .inflate(R.layout.category_list_item, parent, false)
-        return Holder(view)
+        return Holder(view, itemClick)
     }
 
 
-    inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
+    inner class Holder(itemView: View?, val itemClick: (Category) -> Unit) : RecyclerView.ViewHolder(itemView) {
 
-        val  categoryImage = itemView?.findViewById<ImageView>(R.id.categoryImage)
+        val categoryImage = itemView?.findViewById<ImageView>(R.id.categoryImage)
         val categoryName = itemView?.findViewById<TextView>(R.id.categoryName)
 
         fun bindCategory(category: Category, context: Context) {
             val resourceId = context.resources.getIdentifier(category.image, "drawable", context.packageName)
             categoryImage?.setImageResource(resourceId)
             categoryName?.text = category.title
+            itemView.setOnClickListener { itemClick(category) }
         }
     }
 
